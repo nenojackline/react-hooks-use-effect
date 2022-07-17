@@ -13,13 +13,14 @@ function DogPics() {
         console.log("setState");
         setImages(data.message);
       });
-  });
+    }, []);
 
   console.log("render");
 
   return (
     <div>
       {images.map((image) => (
+            // eslint-disable-next-line jsx-a11y/alt-text
         <img src={image} key={image} />
       ))}
     </div>
